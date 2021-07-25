@@ -66,7 +66,7 @@ def isArticulationPoint(data, coord):
     while len(stack) > 0:
         curr = stack.pop()
         if curr in touched:
-            pass
+            continue;
         touched[curr] = True
         nbors = [ n for n in utilGetNeighbors(n, curr) if dataAt(data, n) == 0 ]
         for nbor in nbors:
